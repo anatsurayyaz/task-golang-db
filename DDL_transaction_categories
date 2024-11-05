@@ -1,0 +1,11 @@
+-- public.transaction_categories definition
+
+-- Drop table
+
+-- DROP TABLE public.transaction_categories;
+
+CREATE TABLE public.transaction_categories (
+	transaction_category_id int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
+	"name" varchar NULL,
+	CONSTRAINT transaction_categories_pk PRIMARY KEY (transaction_category_id)
+);
