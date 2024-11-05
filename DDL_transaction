@@ -1,0 +1,16 @@
+-- public."transaction" definition
+
+-- Drop table
+
+-- DROP TABLE public."transaction";
+
+CREATE TABLE public."transaction" (
+	transaction_id int8 GENERATED ALWAYS AS IDENTITY NOT NULL,
+	transaction_category_id int8 NULL,
+	account_id int8 NULL,
+	from_account_id int8 NULL,
+	to_account_id int8 NULL,
+	amount int8 NULL,
+	transaction_date timestamp NULL,
+	CONSTRAINT transaction_pk PRIMARY KEY (transaction_id)
+);
