@@ -1,0 +1,13 @@
+-- public.accounts definition
+
+-- Drop table
+
+-- DROP TABLE public.accounts;
+
+CREATE TABLE public.accounts (
+	account_id int8 GENERATED ALWAYS AS IDENTITY NOT NULL,
+	"name" varchar NOT NULL,
+	balance int8 NOT NULL,
+	referral_account_id int8 NULL,
+	CONSTRAINT newtable_pk PRIMARY KEY (account_id)
+);
