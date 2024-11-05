@@ -1,0 +1,15 @@
+-- public.auths definition
+
+-- Drop table
+
+-- DROP TABLE public.auths;
+
+CREATE TABLE public.auths (
+	auth_id int8 GENERATED ALWAYS AS IDENTITY NOT NULL,
+	account_id int8 NOT NULL,
+	username varchar NOT NULL,
+	"password" varchar NOT NULL,
+	CONSTRAINT auths_pk PRIMARY KEY (auth_id),
+	CONSTRAINT auths_unique UNIQUE (account_id),
+	CONSTRAINT auths_unique_1 UNIQUE (username)
+);
